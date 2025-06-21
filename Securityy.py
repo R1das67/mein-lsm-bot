@@ -55,7 +55,7 @@ async def on_message(message):
     return  # Ignoriere alle Nachrichten
 
 # --- Start Bot + Flask ---
-if _name_ == "_main_":
+if __name__ == "__main__":
     threading.Thread(target=run_flask).start()
     TOKEN = os.getenv("TOKEN")  # Sicherer Zugriff aus Render (nicht im Code)
     bot.run(TOKEN)
