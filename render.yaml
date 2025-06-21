@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: discord-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: WHITELIST_ROLE_ID
+        sync: false
+      - key: WHITELIST_USER_ID
+        sync: false
